@@ -45,11 +45,11 @@ const WeatherData = ({weather}) => {
                 <div className="info">
                     <p>Temperature: {changetemp == true ? `${Math.round((weather?.main.temp-273.15)*(9/5)+32)} F°` : `${Math.round(weather?.main.temp - 273.15)} C°`}</p>
                     <p>Humidity: {`${weather?.main.humidity} %`}</p>
-                    <p>Thermal sensation  : {changetemp == true ? `${Math.round((weather?.main.feels_like-273.15)*(9/5)+32)} F°` : `${Math.round(weather?.main.feels_like - 273.15)} C°`}</p>
+                    <p>Thermal sensation  : {changetemp == true ? `${Math.round((weather?.main.feels_like-273.15)*(9/5)+32)} °F` : `${Math.round(weather?.main.feels_like - 273.15)} °C`}</p>
                     <p>Wind: {weather?.wind.speed} m/s at {weather?.wind.deg}° </p>
                 </div>
                 <button className="button" onClick={changeTempMeasure}>
-                    <p>Change</p>
+                    <p>Change to {changetemp == true ? "°C" : "°F"}</p>
                 </button>
             </div>
             </div>
