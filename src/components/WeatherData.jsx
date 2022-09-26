@@ -43,7 +43,7 @@ const WeatherData = ({weather}) => {
                     <img src={ weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}alt="" />
                 </div>
                 <div className="info">
-                    <p>Temperature: {changetemp == true ? `${Math.round((weather?.main.temp-273.15)*(9/5)+32)} F°` : `${Math.round(weather?.main.temp - 273.15)} C°`}</p>
+                    <h2>Temperature: {changetemp == true ? `${Math.round((weather?.main.temp-273.15)*(9/5)+32)} F°` : `${Math.round(weather?.main.temp - 273.15)} C°`}</h2>
                     <p>Humidity: {`${weather?.main.humidity} %`}</p>
                     <p>Thermal sensation  : {changetemp == true ? `${Math.round((weather?.main.feels_like-273.15)*(9/5)+32)} °F` : `${Math.round(weather?.main.feels_like - 273.15)} °C`}</p>
                     <p>Wind: {weather?.wind.speed} m/s at {weather?.wind.deg}° </p>
