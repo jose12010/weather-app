@@ -49,7 +49,7 @@ const WeatherData = ({weather}) => {
                     <p>Wind: {weather?.wind.speed} m/s at {weather?.wind.deg}° </p>
                 </div>
                 <button className="button" onClick={changeTempMeasure}>
-                    Change
+                    <p>Change</p>
                 </button>
             </div>
             </div>
