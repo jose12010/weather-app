@@ -30,7 +30,6 @@ function App() {
       const API = "ee4c58dc44cc8898d3029a2045e2615f"
       if(position){
         const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lon}&appid=${API}`
-        // const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${52.021111}&lon=${8.534722}&appid=${API}`
         axios.get(URL)
         .then( res => setWeather(res.data)) 
         .catch( error => console.log(error))
