@@ -22,10 +22,10 @@ const WeatherData = ({weather}) => {
     useEffect(()=>{
         setBackground();
         function setBackground(){
-            if(weather?.weather[0].main == "Clouds"){setChangeback(imageCloud)}
-            if(weather?.weather[0].main == "Rain"){setChangeback(imageRain)}
-            if(weather?.weather[0].main == "Clear"){setChangeback(imageSun)}
-            
+            if(weather?.weather[0].main == "Clouds"){setChangeback(imageCloud); return }
+            if(weather?.weather[0].main == "Rain"){setChangeback(imageRain); return}
+            if(weather?.weather[0].main == "Clear"){setChangeback(imageSun); return}
+            return setChangeback(imageSun)
         }
     },[weather])
     
