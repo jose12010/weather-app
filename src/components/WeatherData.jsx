@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react"
-import imageCloud from "/Images/backgrounds/hand-painted-watercolor-pastel-sky-cloud-background_41066-1919.jpg"
-import imageRain from "/Images/backgrounds/rainy.jpg"
-import imageSun from "/Images/backgrounds/screen-6.webp"
+import React, { useState } from "react"
+import imageBackground from "/Images/backgrounds/hand-painted-watercolor-pastel-sky-cloud-background_41066-1919.jpg"
+// import imageRain from "/Images/backgrounds/rainy.jpg"
+// import imageSun from "/Images/backgrounds/screen-6.webp"
 const WeatherData = ({weather}) => {
     console.log(weather)
     const [changetemp, setChangetemp] = useState(true)
-    const [changeback, setChangeback] = useState()
+    // const [changeback, setChangeback] = useState()
     
     function changeTempMeasure() {
         if(changetemp) {
@@ -19,19 +19,19 @@ const WeatherData = ({weather}) => {
         
     }
 
-    useEffect(()=>{
-        setBackground();
-        function setBackground(){
-            if(weather?.weather[0].main == "Clouds"){setChangeback(imageCloud); return }
-            if(weather?.weather[0].main == "Rain"){setChangeback(imageRain); return}
-            if(weather?.weather[0].main == "Clear"){setChangeback(imageSun); return}
-            return setChangeback(imageSun)
-        }
-    },[weather])
+    // useEffect(()=>{
+    //     setBackground();
+    //     function setBackground(){
+    //         if(weather?.weather[0].main == "Clouds"){setChangeback(imageCloud); return }
+    //         if(weather?.weather[0].main == "Rain"){setChangeback(imageRain); return}
+    //         if(weather?.weather[0].main == "Clear"){setChangeback(imageSun); return}
+    //         return setChangeback(imageSun)
+    //     }
+    // },[weather])
     
     return(
         
-        <div className="main" style={{ backgroundImage: `url(${changeback})` }} >
+        <div className="main" style={{ backgroundImage: `url(${imageBackground})` }} >
             <div className="display" >
                 
             <div className="title">
